@@ -25,17 +25,3 @@ app.get('/smoothies', (req, res) => res.render('smoothies'));
 app.use(authRoutes)
 
 
-// set cookine
-app.get('/set-cookies',(req,res)=>{
-  // res.setHeader('Set-cookie','newUser=true')
-  res.cookie('newUser', false)
-  res.cookie('isEmploye', true, {maxAge : 1000 * 60 * 60 * 24, httpOnly:true})
-  res.send('you got the cookie')
-})
-
-// read cookine
-app.get('/read-cookies',(req,res)=>{
-  const cookies = req.cookies;
-  console.log(cookies);
-  res.json(cookies)
-})
