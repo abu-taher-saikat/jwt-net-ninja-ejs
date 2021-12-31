@@ -12,7 +12,9 @@
     "mongoose": "^5.9.23",
     "validator": "^13.5.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
